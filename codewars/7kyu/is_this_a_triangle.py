@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 """
 https://www.codewars.com/kata/56606694ec01347ce800001b
 
