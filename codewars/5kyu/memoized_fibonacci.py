@@ -38,7 +38,18 @@ memoization cache is private to this function?
 """
 
 
-def fibonacci(n):
-    if n in [0, 1]:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+class Fibonacci:
+
+    _cache = dict()
+
+    def __call__(self, n):
+        if n in [0, 1]:
+            return n
+        if n in self._cache.keys():
+            return self._cache[n]
+        answer = self(n - 1) + self(n - 2)
+        self._cache[n] = answer
+        return answer
+
+
+fibonacci = Fibonacci()
