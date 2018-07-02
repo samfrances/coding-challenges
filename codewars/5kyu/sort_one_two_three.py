@@ -2,6 +2,23 @@
 
 """
 Solution to: http://www.codewars.com/kata/56f4ff45af5b1f8cd100067d/
+
+
+Hey You !
+
+Sort these integers for me ...
+
+By name ...
+
+Do it now !
+Input
+
+    Range is 0-999
+
+    There may be duplicates
+
+    The array may be empty
+
 """
 
 
