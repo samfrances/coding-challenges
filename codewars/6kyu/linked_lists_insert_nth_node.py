@@ -32,6 +32,13 @@ class Node(object):
 
 
 def insert_nth(head, index, data):
-    # Your code goes here.
-    # Return the head of the list.
-    pass
+    node = Node(data)
+    if index == 0:
+        node.next = head
+        return node
+    if index == 1:
+        node.next = head.next
+        head.next = node
+        return head
+    insert_nth(head.next, index-1, data)
+    return head
