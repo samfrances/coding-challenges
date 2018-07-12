@@ -36,9 +36,9 @@ def insert_nth(head, index, data):
     if index == 0:
         node.next = head
         return node
-    if index == 1:
+    elif index == 1:
         node.next = head.next
         head.next = node
-        return head
-    insert_nth(head.next, index-1, data)
+    else:
+        insert_nth(head.next, index-1, data)
     return head
