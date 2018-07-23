@@ -17,15 +17,17 @@ sortedInsert(3 -> 5 -> 9 -> null, 7) === 3 -> 5 -> 7 -> 9 -> null)
 The push() and buildOneTwoThree() functions do not need to be redefined.
 """
 
-""" For your information:
+
 class Node(object):
     def __init__(self, data):
         self.data = data
         self.next = None
-"""
 
 
 def sorted_insert(head, data):
-    # Your code goes here.
-    # Make sure to return the head of the list.
-    pass
+    if head is None or head.data > data:
+        new_head = Node(data)
+        new_head.next = head
+        return new_head
+    head.next = sorted_insert(head.next, data)
+    return head
